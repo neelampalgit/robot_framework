@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ./app_keywords.robot
 Library    user_funcs.py
 
 *** Variables ***
@@ -33,6 +32,13 @@ Login to OrangeHRM Demp Application
     log to console              Login Passed
     close browser
 
+*** Keywords ***
+Launch the application on requested browser
+    [Arguments]                 ${url}      ${browser}
+    open browser                ${url}      ${browser}
+    maximize browser window
+    title should be             OrangeHRM
+    sleep                       5s
 
 Login to OrangeHRM Demo Application with multiple users
     [Documentation]    This test case will test login functionality of orange hrm demo application

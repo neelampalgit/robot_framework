@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.11.7 on win32)" generated="2024-11-27T21:55:30.341194" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Neelam\pythonProject3\login_test.robot">
+<test id="s1-t1" name="Login to OrangeHRM Demo Application with multiple users" line="37">
+<for flavor="IN">
+<iter>
+<kw name="Launch the application on requested browser" owner="app_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:31.484000" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T21:55:31.483009" elapsed="6.937354"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T21:55:38.422366" elapsed="4.096367"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:42.629547" level="INFO">Page title is 'OrangeHRM'.</msg>
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-27T21:55:42.519730" elapsed="0.110826"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:55:47.637189" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:55:42.632057" elapsed="5.005639"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-11-27T21:55:31.471919" elapsed="16.165777"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:47.640175" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:55:47.638740" elapsed="0.339809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:47.980549" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:55:47.979545" elapsed="0.429049"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:48.410446" level="INFO">Clicking button 'css=.orangehrm-login-button'.</msg>
+<arg>css=.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:55:48.408594" elapsed="1.703348"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:55:57.127639" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:55:50.112455" elapsed="7.033503"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:55:57.469371" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-27T21:55:57.151517" elapsed="0.317854"/>
+</kw>
+<arg>page should contain</arg>
+<arg>Dashboard</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-11-27T21:55:57.147469" elapsed="0.322992"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login Passed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-27T21:55:57.470461" elapsed="0.019645"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T21:55:57.504218" elapsed="10.203118"/>
+</kw>
+<var name="${username}">Admin</var>
+<var name="${password}">admin123</var>
+<status status="PASS" start="2024-11-27T21:55:31.466337" elapsed="36.242036"/>
+</iter>
+<iter>
+<kw name="Launch the application on requested browser" owner="app_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:07.725160" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T21:56:07.722707" elapsed="7.333577"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T21:56:15.057788" elapsed="3.310243"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:18.470736" level="INFO">Page title is 'OrangeHRM'.</msg>
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-27T21:56:18.369543" elapsed="0.101193"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:56:23.475909" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:56:18.471733" elapsed="5.004176"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-11-27T21:56:07.715881" elapsed="15.761539"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:23.482477" level="INFO">Typing text 'wrongAdmin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:56:23.478478" elapsed="0.817487"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:24.298515" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:56:24.295965" elapsed="0.641454"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:24.939520" level="INFO">Clicking button 'css=.orangehrm-login-button'.</msg>
+<arg>css=.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:56:24.938504" elapsed="2.172276"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:56:34.115795" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:56:27.113321" elapsed="7.005031"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:34.768327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-27T21:56:34.800571" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-11-27T21:56:34.129395" elapsed="0.766474">Page should have contained text 'Dashboard' but did not.</status>
+</kw>
+<arg>page should contain</arg>
+<arg>Dashboard</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-11-27T21:56:34.123376" elapsed="0.776555">Page should have contained text 'Dashboard' but did not.</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login Passed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-27T21:56:34.901441" elapsed="0.006008"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T21:56:34.909471" elapsed="7.017962"/>
+</kw>
+<var name="${username}">wrongAdmin</var>
+<var name="${password}">admin123</var>
+<status status="FAIL" start="2024-11-27T21:56:07.711886" elapsed="34.217583">Page should have contained text 'Dashboard' but did not.</status>
+</iter>
+<iter>
+<kw name="Launch the application on requested browser" owner="app_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:41.935818" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-27T21:56:41.934725" elapsed="12.209306"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-27T21:56:54.145030" elapsed="0.328969"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:54.781388" level="INFO">Page title is 'OrangeHRM'.</msg>
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-27T21:56:54.474974" elapsed="0.306923"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:56:59.783929" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:56:54.781897" elapsed="5.003039"/>
+</kw>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-11-27T21:56:41.932164" elapsed="17.855281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:56:59.794596" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:56:59.788526" elapsed="0.677987"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:57:00.470677" level="INFO">Typing text 'wrongadmin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:57:00.468026" elapsed="1.631476"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:57:02.115225" level="INFO">Clicking button 'css=.orangehrm-login-button'.</msg>
+<arg>css=.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-27T21:57:02.100545" elapsed="0.977221"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-27T21:57:10.093459" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-27T21:57:03.081322" elapsed="7.012137"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-27T21:57:10.349411" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-27T21:57:10.351958" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2024-11-27T21:57:10.095471" elapsed="0.267054">Page should have contained text 'Dashboard' but did not.</status>
+</kw>
+<arg>page should contain</arg>
+<arg>Dashboard</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-11-27T21:57:10.094474" elapsed="0.269030">Page should have contained text 'Dashboard' but did not.</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login Passed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-11-27T21:57:10.363504" elapsed="0.003993"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-27T21:57:10.368005" elapsed="5.896305"/>
+</kw>
+<var name="${username}">Admin</var>
+<var name="${password}">wrongadmin123</var>
+<status status="FAIL" start="2024-11-27T21:56:41.930952" elapsed="34.334355">Page should have contained text 'Dashboard' but did not.</status>
+</iter>
+<var>${username}</var>
+<var>${password}</var>
+<value>Admin</value>
+<value>admin123</value>
+<value>wrongAdmin</value>
+<value>admin123</value>
+<value>Admin</value>
+<value>wrongadmin123</value>
+<status status="FAIL" start="2024-11-27T21:55:31.463345" elapsed="104.802959">Several failures occurred:
+
+1) Page should have contained text 'Dashboard' but did not.
+
+2) Page should have contained text 'Dashboard' but did not.</status>
+</for>
+<doc>This test case will test login functionality of orange hrm demo application</doc>
+<status status="FAIL" start="2024-11-27T21:55:31.455750" elapsed="104.839986">Several failures occurred:
+
+1) Page should have contained text 'Dashboard' but did not.
+
+2) Page should have contained text 'Dashboard' but did not.</status>
+</test>
+<status status="FAIL" start="2024-11-27T21:55:30.345457" elapsed="106.045995"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

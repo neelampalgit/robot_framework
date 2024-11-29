@@ -6,9 +6,9 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                // Create the directory to store the Robot Framework reports
+                // Create the directory to store the Robot Framework reports (Windows-compatible)
                 script {
-                    bat "mkdir -p ${ROBOT_REPORTS}"
+                    bat "mkdir ${ROBOT_REPORTS}"
                 }
             }
         }

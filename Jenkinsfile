@@ -29,7 +29,7 @@ pipeline {
         stage('Publish Reports') {
             steps {
                 // Publish the Robot Framework results
-                publishRobotResults path: "${ROBOT_REPORTS}"
+                robot(outputPath: "${ROBOT_REPORTS}")
             }
         }
     }

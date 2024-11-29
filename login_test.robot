@@ -24,8 +24,8 @@ Greet specific user
 Login to OrangeHRM Demp Application
     [Documentation]    This test case will test login functionality of orange hrm demo application
     Launch the application on requested browser     ${url}      ${browser}
-    input text                  name=username                   ${username}
-    input text                  name=password                   ${password}
+    input text                  name=username                   Admin
+    input text                  name=password                   admin123
     click button                css=.orangehrm-login-button
     sleep                       7s
     page should contain         Dashboard

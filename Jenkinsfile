@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run Robot Tests') {
             steps {
-                sh '''
+                bat '''
                     mkdir -p ${ROBOT_REPORTS}
                     robot --outputdir ${ROBOT_REPORTS} tests/
                 '''

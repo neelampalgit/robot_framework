@@ -1,34 +1,33 @@
 pipeline {
     agent any
     environment {
-        ROBOT_REPORTS = 'reports'
+        ROBOT_REPORTS = 'robot_reports'  // Define output directory for reports
     }
     stages {
-        stage('Clone Repository') {
+        stage('Prepare') {
             steps {
-                git branch: 'main', url: 'https://github.com/neelampalgit/robot_framework.git'
+                // Create the directory to store the Robot Framework reports
+                script {
+                    bat "mkdir -p ${ROBOT_REPORTS}"
+                }
             }
         }
-        stage('Install Dependencies') {
+
+        stage('Run Tests') {
             steps {
-                bat 'pip install -r requirements.txt'
+                // Run Robot Framework tests from the root directory
+                script {
+                    bat """
+                    robot --outputdir ${ROBOT_REPORTS} *.robot
+                    """
+                }
             }
         }
-        stage('Run Robot Tests') {
-            steps {
-                bat '''
-                    mkdir -p ${ROBOT_REPORTS}
-                    robot --outputdir ${ROBOT_REPORTS} 
-                '''
-            }
-        }
+
         stage('Publish Reports') {
             steps {
-                publishHTML target: [
-                    reportDir: "${ROBOT_REPORTS}",
-                    reportFiles: 'report.html',
-                    reportName: 'Robot Framework Report'
-                ]
+                // Publish the Robot Framework results
+                publishRobotResults path: "${ROBOT_REPORTS}"
             }
         }
     }

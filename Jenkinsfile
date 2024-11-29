@@ -18,7 +18,7 @@ pipeline {
             steps {
                 bat '''
                     mkdir -p ${ROBOT_REPORTS}
-                    robot --outputdir ${ROBOT_REPORTS} tests/
+                    robot --outputdir ${ROBOT_REPORTS} 
                 '''
             }
         }

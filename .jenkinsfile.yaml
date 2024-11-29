@@ -1,0 +1,33 @@
+pipeline:
+  agent:
+    any
+
+  environment:
+    ROBOT_REPORTS: "reports"
+
+  stages:
+    - stage: "Clone Repository"
+      steps:
+        - script: |
+            echo "Cloning repository"
+            git branch: 'main', url: 'https://github.com/neelampalgit/robot_framework.git'
+
+    - stage: "Install Dependencies"
+      steps:
+        - script: |
+            echo "Installing dependencies"
+            pip install -r requirements.txt
+
+    - stage: "Run Robot Tests"
+      steps:
+        - script: |
+            echo "Running Robot Framework Tests"
+            mkdir -p $ROBOT_REPORTS
+            robot --outputdir $ROBOT_REPORTS tests/
+
+    - stage: "Publish Reports"
+      steps:
+        - publishHTML:
+            reportName: "Robot Framework Report"
+            reportDir: "reports"
+            reportFiles: "report.html"
